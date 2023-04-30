@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML</title>
+</head>
+<style>
+   form {
+     border: 1px solid gray;   /* border to the form */
+   }
+   /* Full-width inputs */
+	input[type=text], input[type=password] {
+	  width: 100%;
+	  padding: 16px 16px;
+	  margin: 10px 0;
+	  display: inline-block;
+	  border: 1px solid #cccccc;
+	  box-sizing: border-box;
+	}
+
+	/* Set a style for all buttons */
+	button {
+	  background-color: #000544;
+	  color: white;
+	  padding: 16px 15px;
+	  margin: 5px 0;
+	  border: none;
+	  cursor: pointer;
+	  margin-left: 16px; 
+	}
+
+	/* Add a hover effect for buttons */
+	button:hover {
+	  opacity: 0.5;
+	}
+
+	/* Extra style for the cancel button (red) */
+	.cancelbtn {
+	  width: auto;
+	  color: black;
+	  padding: 10px 15px;
+	  background-color: red;
+	  margin-left: 16px;
+	 
+	}
+    .psw {
+	 float: right;
+	 padding-top: 16px;
+	 padding-right:10px;
+	}
+	/* Change styles for span and cancel button on  small screens */
+		@media screen and (max-width: 500px) {
+		  span.psw {
+			display: block;
+			float: none;
+		  }
+		  button {
+		    width: 100%;
+			margin-left: 0;
+		  }
+		  .cancelbtn {
+			width: 100%;
+			margin-left: 0;
+		  }
+		}	
+</style>
+<body>
+    
+	<form>
+		<div class="container">
+		  <label><b> Username</b></label>
+		  <input type="text" placeholder="Enter username" name="username">
+		  <label> <b> Enter Password </b></label>
+		  <input type="password" placeholder="Enter Password" name="password">
+		  <button type="submit" > Login </button>
+		  <input type="checkbox" checked="checked"> Remember me
+		</div>
+		<div class="container" style="background-color:#cccccc; margin-top: 50px;">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<span class="psw"> <a href="#">Forgot password?</a></span>
+		 </div>
+		</form>
+</body>
+</html>
+  
+            <a href ="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+              role="button">
+              <i class="fab fa-facebook-f me-2"></i>Continue with google
+            </a>
+            
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
